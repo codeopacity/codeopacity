@@ -1,0 +1,162 @@
+/*color code*/
+
+:root{
+    --black: #101100;
+    --white: #ffffff;
+    --smoke: #f0f0f0;
+    --gray: #8f8f8f;
+    --shadow: rgba(0, 0, 0, 0.25);
+    --cyan: rgb(0, 120, 255);
+}
+/*html tag*/
+*,html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+}
+a{
+    text-decoration: none;
+}
+li,ul{
+    list-style: none;
+}
+p{
+    font-weight: 450;
+}
+/*global css*/
+.container{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1180px;
+    padding:0 20px;
+}
+@media (max-width:768px){
+    .container{
+        padding:0 40px;
+    }
+}
+/*opacity flex*/
+.flex-r{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.flex-c{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*opacity grid*/
+.grid-1,.grid-2,.grid-3,.grid-4,.grid-5{
+    display: grid;
+    grid-gap: 25px;
+}
+.grid-1{
+    grid-template-columns: 1fr;
+}
+.grid-2{
+    grid-template-columns: repeat(2,1fr);
+}
+.grid-3{
+    grid-template-columns: repeat(3,1fr);
+}
+.grid-4{
+    grid-template-columns: repeat(4,1fr);
+}
+.grid-5{
+    grid-template-columns: repeat(5,1fr);
+}
+/*MEDIA*/
+@media (max-width:768px){
+    .grid-2,.grid-3,.grid-4,.grid-5{
+        grid-template-columns: 1fr;
+    }
+}
+
+span-2{
+    grid-template-columns: 2 / 3;
+}
+
+/**/
+/*opacity position*/
+
+.p-r{
+    position: relative;
+}
+.p-a{
+    position: absolute;
+}
+.p-f{
+    position: fixed;
+}
+.z-top{
+    z-index: 2;
+}
+.z-norm{
+    z-index: 1;
+}
+.z-back{
+    z-index: -1;
+}
+.z-nav{
+    z-index: 1000;
+}
+/*finished*/
+.tac{
+    text-align: center;
+}
+.taj{
+    text-align: justify;
+}
+.tal{
+    text-align: left;
+}
+.tar{
+    text-align: right;
+}
+/*opacity nav*/
+.smooth{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu{
+    display: flex;
+}
+@media (max-width:768px){
+    .menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/*utilities*/
+.ard{
+    box-shadow: 0 0 10px var(--shadow);
+    padding: 20px;
+    box-sizing: border-box;
+    background: var(--white);
+    margin: 30px 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.reset{
+    border: none;
+    outline: none;
+}
