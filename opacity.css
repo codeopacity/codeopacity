@@ -163,7 +163,7 @@ p{
 /*end here*/
 
 @media (max-width:768px){
-    .grid,.grid-2,.grid-3{
+    .grid,.grid-2,.grid-3,.grid-4{
         grid-template-columns: 1fr!important;
     }
     .grid-2 div{
