@@ -1,66 +1,42 @@
-/*color code*/
-
-:root{
-    --black: #101100;
-    --white: #ffffff;
-    --smoke: #f0f0f0;
-    --gray: #8f8f8f;
-    --shadow: rgba(0, 0, 0, 0.25);
-    --cyan: rgb(0, 120, 255);
-}
-/*html tag*/
-*,html{
+@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(./custom.css);
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: sans-serif;
+    overflow-x: hidden;
     line-height: 1.5;
+}
+/*reset*/
+li,ul{
+    list-style-type: none;
 }
 a{
     text-decoration: none;
 }
-li,ul{
-    list-style: none;
+button{
+    border: 0;
+    outline: none;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0 0 .7rem 0;
+    font-weight: 600;
 }
 p{
-    font-weight: 450;
+    color: #555454;
 }
-/*global css*/
+/*end*/
 .container{
     width: 100%;
+    max-width: 1160px;
+    padding: 0 30px;
     margin: 0 auto;
-    max-width: 1180px;
-    padding:0 20px;
 }
-@media (max-width:768px){
-    .container{
-        padding:0 40px;
-    }
-}
-/*opacity flex*/
-.flex-r{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.flex-c{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-/*opacity grid*/
-.grid-1,.grid-2,.grid-3,.grid-4,.grid-5{
+.grid{
     display: grid;
-    grid-gap: 25px;
-}
-.grid-1{
-    grid-template-columns: 1fr;
 }
 .grid-2{
     grid-template-columns: repeat(2,1fr);
@@ -71,23 +47,71 @@ p{
 .grid-4{
     grid-template-columns: repeat(4,1fr);
 }
-.grid-5{
-    grid-template-columns: repeat(5,1fr);
+
+.grid,.grid-2,.grid-3,.grid-4{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 20px;
 }
-/*MEDIA*/
-@media (max-width:768px){
-    .grid-2,.grid-3,.grid-4,.grid-5{
-        grid-template-columns: 1fr;
-    }
+/*flex-box*/
+.flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.flex-c{
+    display: flex;
+    flex-direction: column;
+}
+.wrap{
+    flex-wrap: wrap;
 }
 
-span-2{
-    grid-template-columns: 2 / 3;
+
+/*align*/
+.aifs{
+    align-items: flex-start;
 }
+.asc{
+    align-self: center;
+}
+.tac{
+    text-align: center;
+}
+.tar{
+    text-align: right;
+}
+.taj{
+    text-align: justify;
+}
+/*end align*/
 
-/**/
-/*opacity position*/
 
+/*justify*/
+.jsc{
+    justify-self: center;
+}
+.jcsb{
+    justify-content: space-between;
+}
+.jsfe{
+    justify-self: flex-end;
+}
+.jcfe{
+    justify-content: flex-end;
+}
+/*end justify*/
+
+
+
+/*img*/
+.img-max{
+    max-width: 100%;
+    height: auto;
+}
+/*position*/
 .p-r{
     position: relative;
 }
@@ -97,66 +121,43 @@ span-2{
 .p-f{
     position: fixed;
 }
+/*z-index*/
 .z-top{
-    z-index: 2;
-}
-.z-norm{
-    z-index: 1;
-}
-.z-back{
-    z-index: -1;
+    z-index: 100;
 }
 .z-nav{
     z-index: 1000;
 }
-/*finished*/
-.tac{
-    text-align: center;
+.z-back{
+    z-index: -1;
 }
-.taj{
-    text-align: justify;
-}
-.tal{
-    text-align: left;
-}
-.tar{
-    text-align: right;
-}
-/*opacity nav*/
-.smooth{
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
-.navbar{
-    width: 100%;
+/*end*/
+
+
+
+
+
+/*nav utilities*/
+.navBar{
+    padding: 20px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.menu{
+.navBar .menu{
     display: flex;
 }
-@media (max-width:768px){
-    .menu{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+.navBar li{
+    list-style: none;
 }
-/*utilities*/
-.ard{
-    box-shadow: 0 0 10px var(--shadow);
-    padding: 20px;
-    box-sizing: border-box;
-    background: var(--white);
-    margin: 30px 0;
+.navBar a{
+    margin-right: 1.5rem;
+    font-size: 1.1rem;
 }
-img {
-    max-width: 100%;
-    height: auto;
+
+.navBar .brand,.navBar .logo{
+    margin: 0;
+    font-size: 1.5rem;
 }
-.reset{
-    border: none;
-    outline: none;
-}
+
+/*end here*/
