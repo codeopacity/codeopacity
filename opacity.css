@@ -161,3 +161,19 @@ p{
 }
 
 /*end here*/
+
+@media (max-width:768px){
+    .grid,.grid-2,.grid-3{
+        grid-template-columns: 1fr!important;
+    }
+    .grid-2 div{
+            justify-self: center!important;
+    }
+    .flex{
+        flex-direction: column;
+    }
+    .navBar{
+        flex-direction: column;
+    }
+
+}
